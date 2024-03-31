@@ -1,0 +1,70 @@
+.hero-sub {
+  display: flex;
+  justify-content: space-around;
+  /* padding: 0px 40px; */
+  text-align: start;
+  align-items: center;
+  position: relative;
+}
+.hero-container {
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+  height: 832px;
+  width: 100%;
+}
+.hero-left {
+  width: 663px;
+}
+.hero-left > :nth-child(1) {
+  font-weight: 500;
+  font-size: 31px;
+  margin-bottom: 0px;
+}
+.hero-left > :nth-child(2) {
+  font-weight: 700;
+  font-size: 56px;
+  margin: 0px;
+}
+.hero-left > :nth-child(3) {
+  font-size: 20px;
+  font-weight: 400;
+  color: #5c6169;
+}
+.hero-left .centi {
+  color: #2aa7ff;
+}
+.dot-container > :nth-child(1),
+.dot-container > :nth-child(3) {
+  width: 10px;
+  height: 10px;
+  background-color: #bcd8e9;
+  border-radius: 50%;
+}
+.dot-container > :nth-child(2) {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #2aa7ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot-container {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+}
+.innerDiv {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2aa7ff;
+}
