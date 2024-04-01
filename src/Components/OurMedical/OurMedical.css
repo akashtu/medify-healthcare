@@ -1,0 +1,73 @@
+.ourmedical-component {
+  height: auto;
+}
+.ourmedical-component .ourmedical-top h1 {
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  color: #1b3c74;
+}
+.ourmedical-component .ourmedical-middle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ourmedical-component .ourmedical-middle .ourmedical-div {
+  width: 370px;
+  height: 415px;
+  border-radius: 50px;
+  box-shadow: 0px 15px 55px -10px #00000017;
+  background: #ffffff;
+}
+.ourmedical-component .ourmedical-middle .ourmedical-div .ourmedical-innerdiv {
+  width: 350px;
+  height: 395px;
+  border-radius: 25%;
+  background: linear-gradient(144.2deg, #e1f3ff 0%, #2aa7ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.ourmedical-component .ourmedical-middle .ourmedical-textdiv {
+  text-align: center;
+}
+.ourmedical-component .ourmedical-middle .ourmedical-textdiv > :nth-child(1) {
+  font-size: 24px;
+  font-weight: 400;
+  color: #1b3c74;
+}
+.ourmedical-component .ourmedical-middle .ourmedical-textdiv > :nth-child(2) {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2aa7ff;
+}
+.ourmedical-component .ourmedical-bottom > :nth-child(1),
+.ourmedical-component .ourmedical-bottom > :nth-child(3) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bcd8e9;
+}
+.ourmedical-component .ourmedical-bottom > :nth-child(2) {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #2aa7ff;
+  border-radius: 50%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.ourmedical-component .ourmedical-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.ourmedical-component .ourmedical-bottom .ourmedical-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2aa7ff;
+  padding: 5px;
+}

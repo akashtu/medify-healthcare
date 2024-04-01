@@ -4,6 +4,8 @@ import { Hero } from "../Hero/Hero";
 import { Search } from "../Search/Search";
 import { Offers } from "../Offers/Offers";
 import { Specilization } from "../Specilization/Specilization";
+import { OurMedical } from "../OurMedical/OurMedical";
+import { Caring } from "../Caring/Caring";
 export const Home = () => {
   return (
     <div>
@@ -11,6 +13,8 @@ export const Home = () => {
       <Search />
       <Offers />
       <Specilization />
+      <OurMedical />
+      <Caring />
     </div>
   );
 };
