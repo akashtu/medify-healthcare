@@ -1,0 +1,113 @@
+.caring-component {
+  height: 598px;
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+  /* border: 1px solid red; */
+  padding-top: 40px;
+  margin-top: 40px;
+}
+.caring-component .caringinner-component {
+  width: 1153px;
+  height: 486px;
+  /* border: 1px solid black; */
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.caring-component .caringinner-component .caring-left {
+  position: relative;
+}
+.caring-component .caringinner-component .caring-left .caringleft-div {
+  width: 234.45px;
+  height: 86px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0px 40px 40px -15px #94b6ce26;
+  position: absolute;
+  top: -150px;
+  text-align: center;
+}
+.caring-component
+  .caringinner-component
+  .caring-left
+  .caring-component
+  .caringinner-component
+  .caring-left
+  .caringleft-div
+  div
+  h3 {
+  margin: 0px;
+}
+.caring-component .caringinner-component .caring-left .caringleft-div div p {
+  margin: 0px;
+}
+
+.caring-component .caringinner-component .caring-left > :nth-child(1) {
+  position: absolute;
+  top: -250px;
+  left: 200px;
+}
+.caring-component .caringinner-component .caring-left > :nth-child(2) {
+  position: absolute;
+  top: -25px;
+  left: 70px;
+}
+.caring-component .caring-right {
+  width: 563px;
+  height: 375px;
+  /* margin-left: 500px; */
+}
+.caring-component .caring-right div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.caring-component .caring-right > :nth-child(1) {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2aa7ff;
+  margin: 0px;
+}
+.caring-component .caring-right > :nth-child(2) {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 0px;
+}
+.caring-component .caring-right h1 span {
+  color: #2aa7ff;
+}
+.caring-component .caring-right > :nth-child(3) {
+  font-size: 17px;
+  font-weight: 500;
+  color: #77829d;
+}
+.caring-component .caring-right div p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #1b3c74;
+}
+.caring-component
+  .caringinner-component
+  .caring-left
+  .caringleft-div
+  .phoneimage {
+  width: 33px;
+  height: 34px;
+  background-color: #2aa7ff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.caring-component
+  .caringinner-component
+  .caring-left
+  .caringleft-div
+  > :nth-child(1) {
+  display: flex;
+  align-items: center;
+}
