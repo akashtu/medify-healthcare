@@ -6,6 +6,7 @@ import { Offers } from "../Offers/Offers";
 import { Specilization } from "../Specilization/Specilization";
 import { OurMedical } from "../OurMedical/OurMedical";
 import { Caring } from "../Caring/Caring";
+import { News } from "../News/News";
 export const Home = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ export const Home = () => {
       <Specilization />
       <OurMedical />
       <Caring />
+      <News />
     </div>
   );
 };
