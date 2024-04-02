@@ -7,6 +7,7 @@ import { Specilization } from "../Specilization/Specilization";
 import { OurMedical } from "../OurMedical/OurMedical";
 import { Caring } from "../Caring/Caring";
 import { News } from "../News/News";
+import { Families } from "../Families/Families";
 export const Home = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ export const Home = () => {
       <OurMedical />
       <Caring />
       <News />
+      <Families />
     </div>
   );
 };

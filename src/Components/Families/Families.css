@@ -1,0 +1,59 @@
+.families-component {
+  height: 789px;
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+  padding: 40px 0px;
+}
+.families-component .familiessub-component {
+  /* border: 1px solid red; */
+  max-width: 1300px;
+  margin: 0px auto;
+  height: 714px;
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+.families-component .familiessub-component .families-right {
+  display: flex;
+  align-items: center;
+}
+/* .families-component .familiessub-component .families-right .imageclass1 {
+  margin-top: 60px;
+} */
+.families-component
+  .familiessub-component
+  .families-right
+  .families-right-div1 {
+  margin-top: 50px;
+  margin-right: -60px;
+}
+.families-component
+  .familiessub-component
+  .families-right
+  .families-right-div2 {
+  /* margin-top: 50px; */
+  margin-left: -60px;
+}
+.families-component .familiessub-component .families-left > :nth-child(1) {
+  font-size: 17px;
+  font-weight: 600;
+  color: #2aa7ff;
+  margin: 0px;
+}
+.families-component .familiessub-component .families-left > :nth-child(2) {
+  font-size: 48px;
+  font-weight: 600;
+  color: #1b3c74;
+  margin: 0px;
+}
+.families-component .familiessub-component .families-left > :nth-child(3) {
+  font-size: 17px;
+  font-weight: 500;
+  color: #77829d;
+  /* margin: 0px; */
+  width: 531px;
+  height: 205px;
+}
