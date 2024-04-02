@@ -32,6 +32,9 @@ export const Download = () => {
           </div>
         </div>
       </div>
+      <div className="vector_class">
+        <img src={Vector} alt="" />
+      </div>
     </div>
   );
 };

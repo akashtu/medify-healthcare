@@ -81,3 +81,9 @@
   font-size: 16px;
   font-weight: 700;
 }
+.download-component .vector_class {
+  position: absolute;
+  z-index: 99999;
+  left: 750px;
+  bottom: 300px;
+}
