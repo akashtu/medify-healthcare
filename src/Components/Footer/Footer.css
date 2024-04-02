@@ -1,0 +1,67 @@
+.footer-component {
+  height: 424px;
+  background-color: #1b3c74;
+  position: absolute;
+  width: 100%;
+  margin-top: -70px;
+  z-index: 9999;
+}
+.footer-component .footer-top .footer-top1 > :nth-child(1) div {
+  width: 30px;
+  height: 30px;
+  background: #2aa8ff;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-component .footer-top .footer-top1 > :nth-child(1) p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2aa8ff;
+}
+.footer-component .footer-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-component .footer-top .footer-top1 > :nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-component .footer-top .footer-top2 ul {
+  list-style: none;
+}
+.footer-component .footer-top .footer-top2 ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+.footer-component .footer-top .footer-top1 > :nth-child(2) div {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #fffffffc;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-component .footer-top .footer-top1 > :nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 90px;
+}
+hr {
+  width: 90%;
+}
+.footer-component .footer-bottom p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-left: 70px;
+  margin-top: 40px;
+}
