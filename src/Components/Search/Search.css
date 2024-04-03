@@ -79,3 +79,11 @@
   color: #2aa7ff;
   font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+  .search-component {
+    max-width: 80%;
+    top: 120%;
+    left: 10%;
+  }
+}

@@ -13,7 +13,7 @@
     rgba(232, 241, 255, 0.47) 89.11%
   );
   height: 832px;
-  width: 100%;
+  /* width: 100%; */
 }
 .hero-left {
   width: 663px;
@@ -67,4 +67,32 @@
   height: 10px;
   border-radius: 50%;
   background-color: #2aa7ff;
+}
+.hero-container .hero-sub .hero-right div {
+  width: 179px;
+  height: 42px;
+  padding: 8px, 14px, 8px, 14px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 6px 6px 12px 0px #1028511c;
+  z-index: 9999;
+  position: absolute;
+  bottom: 190px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-sub {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-container {
+    width: 100%;
+    overflow: hidden;
+  }
 }

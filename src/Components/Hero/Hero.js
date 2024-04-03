@@ -2,6 +2,7 @@ import React from "react";
 import "./Hero.css";
 import Doctors_image from "../../Assets/NicePng_doctor-png_336282 1.png";
 import { Navbar } from "../Navbar/Navbar";
+import Shield_icon from "../../Assets/Shield check.png";
 export const Hero = () => {
   return (
     <div className="hero-container">
@@ -22,6 +23,10 @@ export const Hero = () => {
           </div>
           <div className="hero-right">
             <img src={Doctors_image} alt="Doctors_image" />
+            <div>
+              <img src={Shield_icon} alt="" />
+              <p>Regular Checkup</p>
+            </div>
           </div>
         </div>
         <div className="dot-container">

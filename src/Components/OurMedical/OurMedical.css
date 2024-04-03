@@ -71,3 +71,21 @@
   background-color: #2aa7ff;
   padding: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .ourmedical-component .ourmedical-middle .ourmedical-div {
+    width: 250px;
+    height: 290px;
+  }
+  .ourmedical-component
+    .ourmedical-middle
+    .ourmedical-div
+    .ourmedical-innerdiv {
+    width: 250px;
+    height: 290px;
+    object-fit: contain;
+  }
+  .ourmedical-component .ourmedical-top h1 {
+    font-size: 30px;
+  }
+}

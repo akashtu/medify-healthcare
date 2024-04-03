@@ -1,7 +1,8 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 0px 80px;
+  /* margin: 10px 80px; */
+  padding: 10px 80px;
   align-items: center;
 }
 .navbar-container .nav-right ul {

@@ -6,6 +6,7 @@ import Labs_icon from "../../Assets/ae.png";
 import Hospitals_icon from "../../Assets/Group.png";
 import Medicine_icon from "../../Assets/e.png";
 import Ambulance_icon from "../../Assets/Group (1).png";
+import { Link } from "react-router-dom";
 export const Search = () => {
   return (
     <div className="search-component">
@@ -19,10 +20,12 @@ export const Search = () => {
             <img src={search_icon} alt="search-icon" />
             <input type="text" placeholder="city" />
           </div>
-          <button className="button search-button">
-            <img src={search_icon} alt="search-icon" />
-            search
-          </button>
+          <Link to="/search">
+            <button className="button search-button">
+              <img src={search_icon} alt="search-icon" />
+              search
+            </button>
+          </Link>
         </form>
       </div>
       <div className="search-middle">

@@ -45,3 +45,13 @@
   text-align: center;
   margin-top: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  .specilization-container .images-div {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  .specilization-container .text-div h1 {
+    font-size: 30px;
+  }
+}
