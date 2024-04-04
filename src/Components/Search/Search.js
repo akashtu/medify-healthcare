@@ -11,7 +11,8 @@ import { MyContext } from "../Modals/Context";
 import { useContext } from "react";
 import axios from "axios";
 export const Search = () => {
-  const { states, statename, setStateName } = useContext(MyContext);
+  const { states, statename, setStateName, setCityName } =
+    useContext(MyContext);
   const [city, setCity] = useState([]);
   const [showstate, setShowState] = useState(false);
   const [showcity, setShowCity] = useState(false);
@@ -89,8 +90,12 @@ export const Search = () => {
       </div>
       <div className={`${showcity ? "city-component" : ""}`}>
         {showcity &&
-          city.map((cities) => {
-            return <p>{cities}</p>;
+          city.map((cities, index) => {
+            return (
+              <p keys={index} onClick={() => setCityName(cities)}>
+                {cities}
+              </p>
+            );
           })}
       </div>
     </div>

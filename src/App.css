@@ -8,3 +8,12 @@
   outline: none;
   color: #fff;
 }
+
+.time-button {
+  width: 84px;
+  height: 31px;
+  border: 1px solid #2aa7ff;
+  border-radius: 3px;
+  color: #2aa7ff;
+  background-color: transparent;
+}

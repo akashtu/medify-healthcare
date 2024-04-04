@@ -1,5 +1,5 @@
 .box-component {
-  height: 268px;
+  /* height: 268px; */
   padding: 24px;
   border-radius: 15px;
   background: #ffffff;
@@ -32,6 +32,7 @@
   font-weight: 600;
   color: #14bef0;
   font-family: poppins;
+  text-wrap: nowrap;
 }
 .text-container > :nth-child(2) {
   font-size: 14px;
@@ -104,4 +105,15 @@
 }
 .outer-div {
   margin-top: 50px;
+}
+.rating {
+  width: 44px;
+  height: 22px;
+  background: #00a500;
+  color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }

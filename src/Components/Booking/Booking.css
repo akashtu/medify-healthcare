@@ -1,0 +1,38 @@
+.booking-component {
+  width: 745px;
+  height: 278px;
+  background: #ffffff;
+  border-top: 1px solid #f0f0f5;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.booking-component > :nth-child(1) {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  gap: 10px;
+}
+.booking-component > :nth-child(2) {
+  display: flex;
+  gap: 40px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.booking-component > :nth-child(3) {
+  display: flex;
+  gap: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.booking-component > :nth-child(4) {
+  display: flex;
+  gap: 40px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.booking-component > :nth-child(1) div p {
+  margin: 0px;
+}
+.booking-component > :nth-child(1) div > :nth-child(2) {
+  color: #01a400;
+}

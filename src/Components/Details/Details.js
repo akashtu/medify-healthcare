@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Details.css";
 import Hospital_icon from "../../Assets/image 22.png";
 import { useContext } from "react";
 import { MyContext } from "../Modals/Context";
+import ThumbsUp_image from "../../Assets/thumbsup_image.png";
+import { Booking } from "../Booking/Booking";
 export const Details = () => {
   const { states, hospitalbystate } = useContext(MyContext);
+  // const [showslots, setShowSlots] = useState();
+  const [showBookingForHospital, setShowBookingForHospital] = useState({});
+
+  // Function to toggle booking visibility for a hospital
+  const toggleBookingVisibility = (hospitalId) => {
+    setShowBookingForHospital((prevState) => ({
+      ...prevState,
+      [hospitalId]: !prevState[hospitalId],
+    }));
+  };
 
   return (
     <div>
@@ -13,7 +25,8 @@ export const Details = () => {
           <div className="col-sm-12 col-md-8">
             <div className="outer-div">
               <h3>
-                {hospitalbystate.length} medical centers available in Alaska
+                {hospitalbystate.length} medical centers available in{" "}
+                {hospitalbystate[0]["State"]}
               </h3>
               <p>
                 Book appointments with minimum wait-time & verified doctor
@@ -22,7 +35,7 @@ export const Details = () => {
             </div>
             {hospitalbystate.map((data) => {
               return (
-                <div className="box-component">
+                <div className="box-component" key={data["Provider ID"]}>
                   <div className="container">
                     <div className="row">
                       <div className="col-sm-8">
@@ -36,7 +49,7 @@ export const Details = () => {
                               </div>
                               <div className="col-sm-8">
                                 <div className="text-container">
-                                  <p>{data.HospitalName}</p>
+                                  <p>{data["Hospital Name"]}</p>
                                   <p>
                                     {data.City}, {data.State}
                                   </p>
@@ -51,6 +64,10 @@ export const Details = () => {
                                     Consultation fee at clinic
                                   </p>
                                   <hr />
+                                  <div className="rating">
+                                    <img src={ThumbsUp_image} alt="" />
+                                    {Number(data["Hospital overall rating"])}
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -60,13 +77,19 @@ export const Details = () => {
                       <div className="col-sm-4">
                         <div className="box-inner2">
                           <p>Available Today</p>
-                          <button className="button">
+                          <button
+                            className="button"
+                            onClick={() =>
+                              toggleBookingVisibility(data["Provider ID"])
+                            }
+                          >
                             Book FREE Center Visit
                           </button>
                         </div>
                       </div>
                     </div>
                   </div>
+                  {showBookingForHospital[data["Provider ID"]] && <Booking />}
                 </div>
               );
             })}
