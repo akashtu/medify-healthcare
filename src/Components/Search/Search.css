@@ -25,6 +25,7 @@
   border: none;
   outline: none;
   background-color: transparent;
+  position: relative;
 }
 .search-component .search-top .form-section span img svg {
   color: black;
@@ -78,6 +79,46 @@
 .search-bottom > :nth-child(3) p {
   color: #2aa7ff;
   font-weight: 600;
+}
+.states-component {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  left: 320px;
+  top: 650px;
+  background-color: rgb(189, 233, 249);
+  padding: 10px;
+  border-radius: 10px;
+}
+.states-component p {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.city-component {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  /* display: block; */
+  position: absolute;
+  z-index: 9999;
+  left: 720px;
+  top: 650px;
+  background-color: rgb(180, 233, 249);
+  padding: 10px;
+  border-radius: 10px;
+}
+.city-component p {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
