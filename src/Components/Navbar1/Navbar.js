@@ -2,13 +2,41 @@ import React from "react";
 import "./Navbar.css";
 import Search_icon from "../../Assets/Icon (4).png";
 import Location_icon from "../../Assets/Icon (5).png";
+import Vector_img from "../../Assets/Vector (1).png";
+import { Link } from "react-router-dom";
+import { MyContext } from "../Modals/Context";
+import { useContext } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 export const Navbar = () => {
+  const { states, statename, setStateName, setCityName } =
+    useContext(MyContext);
+  const [city, setCity] = useState([]);
+  const [showstate, setShowState] = useState(false);
+  const [showcity, setShowCity] = useState(false);
+
+  useEffect(() => {
+    const fetchCity = async () => {
+      const response = await axios.get(
+        `https://meddata-backend.onrender.com/cities/${statename}`
+      );
+      const data = response.data;
+      setCity(data);
+      console.log(data);
+    };
+    fetchCity();
+  }, [statename]);
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Medify
+            <div className="header-container">
+              <div className="header-icon">
+                <img src={Vector_img} alt="" />
+              </div>
+              <p className="heading">Medify</p>
+            </div>
           </a>
           <button
             className="navbar-toggler"
@@ -74,11 +102,11 @@ export const Navbar = () => {
           <div className="row justify-content-sm-center">
             <div className="col-sm-8 display-property">
               <div className="search-section">
-                <div>
+                <div onClick={() => setShowState(!showstate)}>
                   <img src={Location_icon} alt="" />
                   <input type="text" placeholder="state" />
                 </div>
-                <div>
+                <div onClick={() => setShowCity(!showcity)}>
                   <img src={Location_icon} alt="" />
                   <input type="text" placeholder="city" />
                 </div>
@@ -90,6 +118,26 @@ export const Navbar = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className={`${showstate ? "state-component" : ""}`}>
+            {showstate &&
+              states.map((state, index) => {
+                return (
+                  <p keys={index} onClick={() => setStateName(state)}>
+                    {state}
+                  </p>
+                );
+              })}
+          </div>
+          <div className={`${showcity ? "cities-component" : ""}`}>
+            {showcity &&
+              city.map((cities, index) => {
+                return (
+                  <p keys={index} onClick={() => setCityName(cities)}>
+                    {cities}
+                  </p>
+                );
+              })}
           </div>
         </div>
       </div>

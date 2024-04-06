@@ -30,6 +30,13 @@
   position: absolute;
   top: -150px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.caring-component .caringinner-component .caring-left .caringleft-div div {
+  /* padding-left: 5px; */
+  margin-left: 8px;
 }
 .caring-component
   .caringinner-component
@@ -45,7 +52,11 @@
 .caring-component .caringinner-component .caring-left .caringleft-div div p {
   margin: 0px;
 }
-
+.caring-component .caringinner-component .caring-left .caringleft-div div h3 {
+  margin: 0px;
+  text-wrap: nowrap;
+  font-size: 20px;
+}
 .caring-component .caringinner-component .caring-left > :nth-child(1) {
   position: absolute;
   top: -250px;
@@ -85,10 +96,18 @@
   font-weight: 500;
   color: #77829d;
 }
+.caring-component .caring-right > :nth-child(5),
+.caring-component .caring-right > :nth-child(4),
+.caring-component .caring-right > :nth-child(6) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
 .caring-component .caring-right div p {
   font-size: 18px;
   font-weight: 500;
   color: #1b3c74;
+  margin: 0px;
 }
 .caring-component
   .caringinner-component

@@ -71,3 +71,64 @@ input {
 .search-section > :nth-child(3) img {
   margin-right: 20px;
 }
+.header-icon {
+  width: 23px;
+  height: 23px;
+  background: #2aa8ff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.heading {
+  margin-top: 10px;
+  color: #2aa8ff;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 3px;
+}
+.state-component {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  left: 320px;
+  top: 280px;
+  background-color: rgb(189, 233, 249);
+  padding: 10px;
+  border-radius: 10px;
+}
+.state-component p {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cities-component {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  /* display: block; */
+  position: absolute;
+  z-index: 9999;
+  right: 720px;
+  top: 280px;
+  background-color: rgb(180, 233, 249);
+  padding: 10px;
+  border-radius: 10px;
+}
+.cities-component p {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}

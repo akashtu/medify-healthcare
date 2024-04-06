@@ -120,6 +120,9 @@
   font-weight: 500;
   cursor: pointer;
 }
+.search-button {
+  text-decoration: none;
+}
 
 @media screen and (max-width: 768px) {
   .search-component {

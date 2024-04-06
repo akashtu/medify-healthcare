@@ -21,7 +21,8 @@
   width: 1200px;
   margin: 0 100px;
 }
-.news-component .news-top {
+
+.news-component .news-bottom .news-component .news-top {
   text-align: center;
 }
 .news-component .news-bottom .newsbottom-sub .newsbottom-innerdiv {
@@ -50,6 +51,8 @@
   margin: 0px;
   color: #1b3c74;
   font-weight: 500;
+  font-size: 25px;
+  margin-bottom: 10px;
 }
 .news-component
   .news-bottom
