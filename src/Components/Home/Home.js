@@ -8,6 +8,7 @@ import { OurMedical } from "../OurMedical/OurMedical";
 import { Caring } from "../Caring/Caring";
 import { News } from "../News/News";
 import { Families } from "../Families/Families";
+import { Questions } from "../Questions/Questions";
 export const Home = () => {
   return (
     <div>
@@ -19,6 +20,7 @@ export const Home = () => {
       <Caring />
       <News />
       <Families />
+      <Questions />
     </div>
   );
 };

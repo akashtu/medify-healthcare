@@ -1,7 +1,7 @@
 import "./App.css";
 import { Home } from "./Components/Home/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Questions } from "./Components/Questions/Questions";
+// import { Questions } from "./Components/Questions/Questions";
 import { Download } from "./Components/Download/Download";
 import { Footer } from "./Components/Footer/Footer";
 import { Top } from "./Components/Top/Top";
@@ -19,7 +19,6 @@ function App() {
             <Route path="/search" element={<Page1 />} />
             <Route path="/mybookings" element={<Page2 />} />
           </Routes>
-          <Questions />
           <Download />
           <Footer />
         </AppContext>

@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import "./Booking.css";
-import { MyContext } from "../Modals/Context";
-import { useContext, useEffect } from "react";
 export const Booking = ({ id, details }) => {
-  // const { setTime, setDate setId } = useContext(MyContext);
-
-  // const [time, setTime] = useState("11:30");
-  const [date, setDate] = useState("");
-
-  // const [localdata, setLocalData] = useState([]);
+  const [date, setDate] = useState("Today");
 
   const existingData = JSON.parse(localStorage.getItem("bookings")) || [];
 
