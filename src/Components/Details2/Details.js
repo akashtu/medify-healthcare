@@ -5,52 +5,30 @@ import { useContext } from "react";
 import { MyContext } from "../Modals/Context";
 import ThumbsUp_image from "../../Assets/thumbsup_image.png";
 import { Booking } from "../Booking/Booking";
-
 export const Details = () => {
-  const { states, hospitalbystate } = useContext(MyContext);
-  const [visibleBookings, setVisibleBookings] = useState({});
-
-  // Function to toggle booking visibility for a specific hospital
-  const toggleBookingVisibility = (hospitalId) => {
-    setVisibleBookings((prevVisibility) => ({
-      ...prevVisibility,
-      [hospitalId]: !prevVisibility[hospitalId], // Toggle the visibility
-    }));
-  };
+  const bookingsFromStorage =
+    JSON.parse(localStorage.getItem("bookings")) || [];
 
   return (
     <div>
       <div className="container">
         <div className="row">
           <div className="col-sm-12 col-md-8">
-            <div className="outer-div">
-              <h3>
-                {hospitalbystate.length} medical centers available in{" "}
-                {hospitalbystate[0] && hospitalbystate[0]["State"]}
-              </h3>
-              <p>
-                Book appointments with minimum wait-time & verified doctor
-                details
-              </p>
-            </div>
-            {hospitalbystate.map((data) => {
-              const hospitalId = data["Provider ID"];
-              const isBookingVisible = visibleBookings[hospitalId];
-
+            {bookingsFromStorage.map((data) => {
               return (
-                <div className="box-component" key={hospitalId}>
+                <div className="box-component" key={data["Provider ID"]}>
                   <div className="container">
                     <div className="row">
-                      <div className="col-sm-8">
+                      <div className="col-sm-12 col-md-12 col-lg-8 ">
                         <div className="box-inner1">
                           <div className="container">
                             <div className="row">
-                              <div className="col-sm-4">
+                              <div className="col-sm-12 col-md-12 col-lg-4">
                                 <div className="image-container">
                                   <img src={Hospital_icon} alt="" />
                                 </div>
                               </div>
-                              <div className="col-sm-8">
+                              <div className="col-sm-12 col-md-8">
                                 <div className="text-container">
                                   <p>{data["Hospital Name"]}</p>
                                   <p>
@@ -78,25 +56,20 @@ export const Details = () => {
                         </div>
                       </div>
                       <div className="col-sm-4">
-                        <div className="box-inner2">
-                          <p>Available Today</p>
-                          <button
-                            className="button"
-                            onClick={() => toggleBookingVisibility(hospitalId)}
-                          >
-                            Book FREE Center Visit
-                          </button>
+                        <div className="box-innerprop2">
+                          <div className="time-slot">{data.bookingTime}</div>
+                          <div className="date-slot">{data.bookingDate}</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  {isBookingVisible && <Booking details={data} />}
                 </div>
               );
             })}
           </div>
+
           <div className="col-md-4 d-md-block d-sm-none">
-            <div className="box-inner3">
+            <div className="box-innerprop3">
               <p>This World Oral Health Day,</p>
               <p>Get a FREE Appointment* with Top Dentists.</p>
               <p>LIMITED PERIOD OFFER</p>

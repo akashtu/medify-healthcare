@@ -11,12 +11,28 @@ import { MyContext } from "../Modals/Context";
 import { useContext } from "react";
 import axios from "axios";
 export const Search = () => {
-  const { states, statename, setStateName, setCityName } =
-    useContext(MyContext);
+  const {
+    states,
+    statename,
+    setStateName,
+    setCityName,
+    statechange,
+    setStateChange,
+  } = useContext(MyContext);
   const [city, setCity] = useState([]);
   const [showstate, setShowState] = useState(false);
   const [showcity, setShowCity] = useState(false);
   // const [statename, setStateName] = useState("Alaska");
+
+  const setNameFunction = (state) => {
+    setStateName(state);
+    setShowState(false);
+  };
+
+  const setCityFunction = (cities) => {
+    setCityName(cities);
+    setShowCity(false);
+  };
   useEffect(() => {
     const fetchCity = async () => {
       const response = await axios.get(
@@ -30,6 +46,10 @@ export const Search = () => {
   }, [statename]);
   // console.log(states);
 
+  const myChangeName = (e) => {
+    setStateChange(e.target.value);
+  };
+
   return (
     <div>
       <div className="search-component">
@@ -37,7 +57,12 @@ export const Search = () => {
           <form className="form-section">
             <div onClick={() => setShowState(!showstate)}>
               <img src={search_icon} alt="search-icon" />
-              <input type="text" placeholder="state" />
+              <input
+                type="text"
+                placeholder="state"
+                onChange={myChangeName}
+                value={statechange}
+              />
             </div>
 
             <div onClick={() => setShowCity(!showcity)}>
@@ -82,7 +107,7 @@ export const Search = () => {
         {showstate &&
           states.map((state, index) => {
             return (
-              <p keys={index} onClick={() => setStateName(state)}>
+              <p keys={index} onClick={() => setNameFunction(state)}>
                 {state}
               </p>
             );
@@ -92,7 +117,7 @@ export const Search = () => {
         {showcity &&
           city.map((cities, index) => {
             return (
-              <p keys={index} onClick={() => setCityName(cities)}>
+              <p keys={index} onClick={() => setCityFunction(cities)}>
                 {cities}
               </p>
             );

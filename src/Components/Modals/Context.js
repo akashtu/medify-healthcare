@@ -8,18 +8,47 @@ export const AppContext = ({ children }) => {
 
   const [hospitalbystate, setHospitalByState] = useState([]);
 
+  // const [filteredData, setFilteredData] = useState([]);
+
+  // const [newdata, setNewData] = useState([]);
+
+  // setNewData(newArr);
+
   const [states, setStates] = useState([]);
+
+  const [statechange, setStateChange] = useState("");
   // const [city, setCity] = useState([]);
   const URL = "https://meddata-backend.onrender.com";
 
+  const filteredName = states.filter((value) =>
+    value.toLowerCase().includes(statechange.toLowerCase())
+  );
+  const fetchData = async () => {
+    const response = await axios.get(`${URL}/states`);
+    const data = response.data;
+    setStates(data);
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(`${URL}/states`);
-      const data = await response.data;
-      setStates(data);
-    };
-    fetchData();
-  }, []);
+    if (filteredName) {
+      setStates(filteredName);
+    }
+  }, [statechange]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      fetchData();
+    }, 5000);
+  }, [states]);
+
+  // const handleClick = () => {
+  //   const newArr = hospitalbystate.map((hospital) => ({
+  //     ...hospital,
+  //     bookingTime: time,
+  //     bookingDate: date,
+  //   }));
+
+  //   localStorage.setItem("bookings", JSON.stringify(newArr));
+  // };
 
   useEffect(() => {
     const fetchDataByStateName = async () => {
@@ -49,6 +78,9 @@ export const AppContext = ({ children }) => {
         setStateName,
         cityname,
         setCityName,
+        setStates,
+        statechange,
+        setStateChange,
       }}
     >
       {children}

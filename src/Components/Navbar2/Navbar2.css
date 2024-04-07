@@ -1,0 +1,127 @@
+.display-flex {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar-brand {
+  margin-left: 100px;
+}
+.navbar-collapse {
+  margin-left: 500px;
+}
+.last-div {
+  height: 110px;
+  background: linear-gradient(91.75deg, #2aa7ff 1.4%, #0c8ce6 100.57%);
+  width: 100%;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.last-div div {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  width: 403px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+.container-fluid {
+  padding: 0px;
+}
+.search-section1 {
+  height: 111px;
+  background: #ffffff;
+  box-shadow: 6px 6px 35px 0px #1028511c;
+  /* margin-left: 500px; */
+  /* padding-left: 400px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  z-index: 99;
+  margin-top: -40px;
+}
+.search-section1 > :nth-child(1) {
+  width: 545px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* gap: 10px; */
+  padding-left: 30px;
+}
+.search-section1 > :nth-child(1) input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.header-icon {
+  width: 23px;
+  height: 23px;
+  background: #2aa8ff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.heading {
+  margin-top: 10px;
+  color: #2aa8ff;
+  font-size: 18px;
+  font-weight: 700;
+  padding-top: 3px;
+}
+.state-component {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  left: 320px;
+  top: 280px;
+  background-color: rgb(189, 233, 249);
+  padding: 10px;
+  border-radius: 10px;
+}
+.state-component p {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cities-component {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  overflow-y: scroll;
+  /* display: block; */
+  position: absolute;
+  z-index: 9999;
+  right: 720px;
+  top: 280px;
+  background-color: rgb(180, 233, 249);
+  padding: 10px;
+  border-radius: 10px;
+}
+.cities-component p {
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}

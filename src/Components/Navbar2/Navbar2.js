@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import "./Navbar2.css";
 import Search_icon from "../../Assets/Icon (4).png";
 import Location_icon from "../../Assets/Icon (5).png";
 import Vector_img from "../../Assets/Vector (1).png";
@@ -104,29 +104,23 @@ export const Navbar = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-12">
-              <div className="last-div"></div>
+              <div className="last-div">
+                <div>My Bookings</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div className="container-fluid">
-          <div className="row justify-content-sm-center">
-            <div className="col-sm-8 display-property">
-              <div className="search-section">
-                <div onClick={() => setShowState(!showstate)}>
-                  <img src={Location_icon} alt="" />
-                  <input type="text" placeholder="state" />
-                </div>
-                <div onClick={() => setShowCity(!showcity)}>
-                  <img src={Location_icon} alt="" />
-                  <input type="text" placeholder="city" />
+        <div className="container">
+          <div className="row justify-content-sm-end">
+            <div className="col-sm-12 col-md-8 display-property">
+              <div className="search-section1">
+                <div>
+                  <input type="search" placeholder="Search By Hospital" />
                 </div>
                 <div>
-                  <button className="button">
-                    <img src={Search_icon} alt="" />
-                    search
-                  </button>
+                  <button className="button">Search</button>
                 </div>
               </div>
             </div>
